@@ -1,0 +1,36 @@
+17:13:02 **** Build of configuration Debug for project final_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/counter.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/counter.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../final_demo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/counter.d" -MT"src/counter.o" -o "src/counter.o" "../src/counter.c"
+In file included from ../src/counter.c:1:0:
+../src/counter.c: In function 'main':
+../../final_demo_bsp/ps7_cortexa9_0/include/xparameters.h:239:32: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define XPAR_SWITCHES_BASEADDR 0x41200000
+                                ^
+../src/counter.c:84:30: note: in expansion of macro 'XPAR_SWITCHES_BASEADDR'
+    XGpio_Initialize(&output, XPAR_SWITCHES_BASEADDR); //Initializes S.S.D
+                              ^~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/counter.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../final_demo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: final_demo.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../final_demo_bsp/ps7_cortexa9_0/lib -o "final_demo.elf"  ./src/counter.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: final_demo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size final_demo.elf  |tee "final_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25412	   1204	  22664	  49280	   c080	final_demo.elf
+'Finished building: final_demo.elf.size'
+' '
+
+17:13:03 Build Finished (took 1s.92ms)
+
