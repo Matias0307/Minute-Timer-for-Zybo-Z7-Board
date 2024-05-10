@@ -1,0 +1,31 @@
+18:09:21 **** Auto Build of configuration Debug for project final_min ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/timer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../final_min_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer.d" -MT"src/timer.o" -o "src/timer.o" "../src/timer.c"
+In file included from ../src/timer.c:1:0:
+../src/timer.c: In function 'Init_Peripherals':
+../../final_min_bsp/ps7_cortexa9_0/include/xparameters.h:239:32: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define XPAR_SWITCHES_BASEADDR 0x41200000
+                                ^
+../src/timer.c:28:42: note: in expansion of macro 'XPAR_SWITCHES_BASEADDR'
+  int pResult = XGpio_Initialize(&output, XPAR_SWITCHES_BASEADDR);
+                                          ^~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/timer.c'
+' '
+'Building target: final_min.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../final_min_bsp/ps7_cortexa9_0/lib -o "final_min.elf"  ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: final_min.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size final_min.elf  |tee "final_min.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29852	   2780	  22680	  55312	   d810	final_min.elf
+'Finished building: final_min.elf.size'
+' '
+
+18:09:21 Build Finished (took 604ms)
+

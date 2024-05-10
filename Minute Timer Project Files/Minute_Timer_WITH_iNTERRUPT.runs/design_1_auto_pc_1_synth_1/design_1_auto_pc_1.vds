@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Nov 26 19:14:48 2023
+# Process ID: 23512
+# Current directory: C:/Users/matia/Minute_Timer_WITH_iNTERRUPT/Minute_Timer_WITH_iNTERRUPT.runs/design_1_auto_pc_1_synth_1
+# Command line: vivado.exe -log design_1_auto_pc_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_auto_pc_1.tcl
+# Log file: C:/Users/matia/Minute_Timer_WITH_iNTERRUPT/Minute_Timer_WITH_iNTERRUPT.runs/design_1_auto_pc_1_synth_1/design_1_auto_pc_1.vds
+# Journal file: C:/Users/matia/Minute_Timer_WITH_iNTERRUPT/Minute_Timer_WITH_iNTERRUPT.runs/design_1_auto_pc_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_auto_pc_1.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 9fcf7ba8f84f6279.
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 26 19:14:53 2023...
